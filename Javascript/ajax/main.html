@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#b02").click(function(){
+        $("#div2").load("timetable.html");
+    });
+});
+
+$(document).ready(function(){
+    $("#b01").click(function(){
+        $("#div1").load("cv.html");
+    });
+});
+</script>
+</head>
+<body>
+
+<h2>My Timetable and CV</h2>
+
+<div id="div1"> </div>
+<div id="div2"> </div>
+<button id="b01">Get CV</button>
+<button id="b02">Get Timetable</button>
+
+</body>
+</html>

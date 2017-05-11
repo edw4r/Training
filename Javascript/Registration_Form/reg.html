@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+<!--JS Code-->
+<script>
+var m1 = 0;
+var m2 = 0;
+var m3 = 0;
+
+<!--Check input of Name-->
+function checkname() {
+    var x, text;
+
+    // Get the value of the input field with id="name"
+    x = document.getElementById("name").value;
+
+    
+   if (x == "") {
+        text= "Name must be filled out";
+		m1 = 0;
+        }else{
+		text= "ok!!";
+		m1 = 1;
+	}
+    document.getElementById("name_result").innerHTML = text;
+}
+
+<!--Check input of Name-->
+function checksid() {
+    var x, text;
+
+    // Get the value of the input field with id="name"
+    x = document.getElementById("sid").value;
+
+    
+   if (!isNaN(parseFloat(x)) && isFinite(x)) {
+        text= "ok!!";
+		m2=1;
+        }else{
+		text= "Input should consist Number ONLY, Try again!";
+		m2=0;
+	}
+    document.getElementById("sid_result").innerHTML = text;
+}
+
+<!--Check email format-->
+function checkemail() {
+    var x, text;
+
+    // Get the value of the input field with id="name"
+    x = document.getElementById("email").value;
+
+//check with regular expression
+if( /(.+)@(.+){2,}\.(.+){2,}/.test(x) ){
+  // valid email
+  text = "ok!!"
+		m3 = 1;
+} else {
+text= "It is not the correct format of email";
+		m3=0;
+  // invalid email
+}
+    
+ 
+    document.getElementById("email_result").innerHTML = text;
+}
+
+function finalsubmit() {
+if(m1 == 1)
+	if(m2 == 1)
+		if(m3 == 1)
+			alert("Success!");
+		else{
+		alert("check Email");
+		}
+	else{
+		alert("check SID");
+		}
+else{
+		alert("check Name");
+		}
+}
+
+</script>
+</head>
+<body>
+
+<h1>Registration Form</h1>
+<PRE>
+Input you name, SID and email address.
+The SID should only contain Number.
+The email should be in correct format e.g. xxx@gmail.com
+
+After completing the form, there should be an ok!! message under the input box.
+The submission would be successful if all the ok!! messages are shown.
+</PRE>
+
+<div>
+Name:
+<input id="name" onkeydown="checkname()" >
+<!--<button type="button" onclick="checkname()">check</button>-->
+<p id="name_result"></p>
+</div>
+
+<div>
+SID:
+<input id="sid" onkeydown="checksid()">
+<!--<button type="button" onclick="checksid()">check</button>-->
+<p id="sid_result"></p>
+</div>
+
+<div>
+Email:
+<input id="email" onkeydown="checkemail()">
+<!--<button type="button" onclick="checkemail()">check</button>-->
+<p id="email_result"></p>
+</div>
+
+<button type="button" onclick="finalsubmit()">Submit</button>
+</body>
+</html> 
