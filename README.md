@@ -11,7 +11,7 @@ Javascript			- webpage with ajax to update my cv and timetable
 				- my own webpage powered by bootstrap and animation
 				- A registration form with validation function
 
-SQL				- not finish yet
+SQL				- still working
 
 
 -----------------------------------------------------------------------
