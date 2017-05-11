@@ -1,7 +1,7 @@
 <pre>
 Hello!
 
-Here are the deliverable i did:
+Here are the deliverables i did:
 
 Folder Name			Content
 BootStrap			- A KEEP webpage
